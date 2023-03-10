@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%s\n" ./ ../ $(ls -1apv | grep -v "/\|^\.$\|^\.\.$") | sort -d
+printf "./, ../, "; ls -1Apv | grep -v "/\|^\.$\|^\.\.$" | tr '\n' ',' | sed 's/,$/\n/'
