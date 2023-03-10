@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -apv | sed ':a;N;$!ba;s/\n/, /g' | sed 's/\(.*\)\(\/\|,\)$/\1\2\n/'
+(ls -1apv --group-directories-first | sed -z 's/\n/, /g; s/,$/\n/') | cat
