@@ -1,0 +1,9 @@
+#!/bin/bash
+while read word; do
+  # count the occurrences of the word in the input
+  count=$(grep -wc "$word" /dev/stdin)
+  # if it appears exactly once, print it
+  if [ "$count" -eq 1 ]; then
+    echo "$word"
+  fi
+done < /dev/stdin | sort

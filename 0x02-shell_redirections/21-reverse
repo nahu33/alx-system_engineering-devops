@@ -1,0 +1,7 @@
+#!/bin/bash
+# Read input from stdin
+read input
+# Reverse the input using the 'rev' command
+reversed=$(echo "$input" | rev)
+# Output the reversed input
+echo "$reversed"
