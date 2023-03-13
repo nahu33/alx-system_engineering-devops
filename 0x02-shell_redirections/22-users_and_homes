@@ -1,5 +1,2 @@
 #!/bin/bash
-# Read /etc/passwd file and extract username and home directory
-while IFS=':' read -r username x uid gid name home shell; do
-    echo "$username:$home"
-done < /etc/passwd | sort
+cut -d ":" -f1,6 /etc/passwd | sort
