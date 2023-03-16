@@ -1,0 +1,9 @@
+#!/bin/bash
+CFILE=$CFILE
+if [ ! -f $CFILE ]; then
+echo "Error: File '$CFILE' does not exist."
+exit 1
+fi
+OUTFILE=c
+cpp $CFILE -o $OUTFILE
+tail $OUTFILE
